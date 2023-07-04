@@ -42,6 +42,7 @@ header .search input{
     border: none;
     height: 30px;
     padding: 16px;
+
 }
 header .logo{
     font-size: 20px;
@@ -60,6 +61,36 @@ header .logo{
     }
     header .search{
         display: grid;
-        grid-template-columns: 30px 1fr 100px;
+        grid-template-columns: 30px 1fr 200px;
     }
 }
+ header .secondbar{
+    display: grid;
+    grid-template-columns: 200px repeat(8,1fr);
+    align-content: center;
+    background-color: whitesmoke;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: small;
+    white-space: nowrap;
+    overflow-y: hidden;
+ }
+ .secondbar span:first-child{
+    border-right: solid rgb(182, 177, 177) 1px;
+    color: #4949c5;
+ }
+ .secondbar span:first-child::after{
+    content: "";
+    border-color: #4949c5 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    margin-left: 10px;
+    top: 11px;
+    position: relative;
+    /* border-radius: 50%; */
+ }
+ .secondbar span{
+    padding: 10px
+ }
