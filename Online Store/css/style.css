@@ -15,6 +15,7 @@ body {
 /* End Global Rules */
 
 header .firstbar{
+    width: auto;
     padding: 20px;
     background-color: var(--main-color);
     display: grid;
@@ -36,6 +37,7 @@ header .search{
     grid-template-columns: 30px 1fr 10px;
 }
 header .search input{
+    min-width: 50px;
     border-radius: 12px;
     border: none;
     height: 30px;
@@ -45,21 +47,19 @@ header .logo{
     font-size: 20px;
     letter-spacing: 4px;
 }
-/* small */
-@media (min-width: 768px) {
-    .container{
-        width: 768px;
+@media(max-width: 500px){
+    header .firstbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-}
-/* medium */
-@media (min-width: 992px) {
-    .container{
-        width: 992px;
+    .cart,
+    .user {
+        display: flex;
+        justify-content: end;
     }
-}
-/* large */
-@media (min-width: 1200px) {
-    .container{
-        width: 1200px;
+    header .search{
+        display: grid;
+        grid-template-columns: 30px 1fr 100px;
     }
 }
