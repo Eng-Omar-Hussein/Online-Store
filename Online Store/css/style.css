@@ -1,0 +1,64 @@
+/* start Variable */
+:root{
+    --main-color: rgb(238, 225, 46);
+}
+/* End Variable */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: "work sans",sans-serif;
+}
+/* End Global Rules */
+
+header .firstbar{
+    padding: 20px;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: 200px 1fr repeat(2, 100px);
+    grid-template-rows: 32px;
+}
+button{
+    border: none;
+    background-color: var(--main-color);
+    text-transform: capitalize;
+}
+button:hover{
+    color: gray ;
+    cursor:pointer;
+}
+header .search{
+    background: var(--main-color);
+    display: grid;
+    grid-template-columns: 30px 1fr 10px;
+}
+header .search input{
+    border-radius: 12px;
+    border: none;
+    height: 30px;
+}
+header .logo{
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+/* small */
+@media (min-width: 768px) {
+    .container{
+        width: 768px;
+    }
+}
+/* medium */
+@media (min-width: 992px) {
+    .container{
+        width: 992px;
+    }
+}
+/* large */
+@media (min-width: 1200px) {
+    .container{
+        width: 1200px;
+    }
+}
