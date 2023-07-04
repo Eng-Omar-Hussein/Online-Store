@@ -39,6 +39,7 @@ header .search input{
     border-radius: 12px;
     border: none;
     height: 30px;
+    padding: 16px;
 }
 header .logo{
     font-size: 20px;
