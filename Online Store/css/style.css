@@ -44,6 +44,9 @@ header .search input{
     padding: 16px;
 
 }
+header .search input:focus{
+    outline: none;
+}
 header .logo{
     font-size: 20px;
     letter-spacing: 4px;
