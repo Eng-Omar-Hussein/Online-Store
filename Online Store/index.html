@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Store</title>
     <meta name="description" content="Shop the Best Products &amp; Brands in Egypt. ✓ Buy Now, Pay Later ✓ Same Day Delivery ✓ Cash on Delivery ✓ Easy Free Returns ✓ Credit Cards &amp; Debit Cards.">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="main.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
@@ -18,8 +20,8 @@
 </head>
 <body>
     <div class="page">
-        <header> 
-            <div class="firstbar">
+        <header  onmouseleave="displaynoneall()"> 
+            <div class="firstbar" onmouseenter="displaynoneall()">
                 <div class="logo">
                     <i class="fa-solid fa-shop">shoping online</i>
                 </div>
@@ -38,20 +40,100 @@
                     <i class="fa-solid fa-user"></i> 
                 </button>
             </div>
-            <div class="secondbar">
-                <span>all categories</span>
-                <span>electronics</span>
-                <span>mobiles</span>
-                <span>men</span>
-                <span>women</span>
-                <span>home</span>
-                <span>baby & toys</span>
-                <span>supermarket</span>
-                <span>home</span>
+            <div class="secondbar" >
+                <span onmouseenter="displayblock('allcategories'); displaynone('electronics')" >all categories</span>
+                <span onmouseenter="displayblock('electronics'); displaynone('allcategories'); displaynone('mobiles')">electronics</span>
+                <span onmouseenter="displayblock('mobiles'); displaynone('electronics'); displaynone('men')">mobiles</span>
+                <span onmouseenter="displayblock('men'); displaynone('mobiles'); displaynone('women')">men</span>
+                <span onmouseenter="displayblock('women'); displaynone('men'); displaynone('home')">women</span>
+                <span onmouseenter="displayblock('home'); displaynone('women'); displaynone('babytoys')">home</span>
+                <span onmouseenter="displayblock('babytoys'); displaynone('home'); displaynone('supermarket')">baby & toys</span>
+                <span onmouseenter="displayblock('supermarket'); displaynone('babytoys')">supermarket</span>
             </div>
+            <table class="allcategories" style="display: none;" >
+                <thead>
+                    <tr>
+                        <td>electronics</td>
+                        <th>electronics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>mobiles</td>
+                        <th >most popular</th>
+                        <th>top brands</th>
+                    </tr>
+                    <tr>
+                        <td>grocery</td>
+                        <td>TVs, Satellites & Accessories</td>
+                        <td>samsung</td>
+                    </tr>
+                    <tr>
+                        <td>beauty & health</td>
+                        <td>Laptops & Accessories</td>
+                        <td>LG</td>
+                    </tr>
+                    <tr>
+                        <td>fashion</td>
+                        <td>Audio & Home Entertainment</td>
+                        <td>sony</td>
+                    </tr>
+                    <tr>
+                        <td>home & kitchen</td>
+                        <td>video game</td>
+                        <td>lenovo</td>
+                    </tr>
+                    <tr>
+                        <td>sports & fitness</td>
+                        <td>cameras & accessories</td>
+                        <td>dell</td>
+                    </tr>
+                    <tr>
+                        <td>baby products</td>
+                        <td>printers & accessories</td>
+                        <td>HP</td>
+                    </tr>
+                    <tr>
+                        <td>automotive</td>
+                        <td>networking products</td>
+                        <td>apple</td>
+                    </tr>
+                    <tr>
+                        <td>books</td>
+                        <td>data storage</td>
+                        <td>canon</td>
+                    </tr>
+                    <tr>
+                        <td>stationery</td>
+                        <td>computer components</td>
+                        <td>cager</td>
+                    </tr>
+                    <tr>
+                        <td>music</td>
+                        <td>computer accessories</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="electronics" style="display: none;" >
+                <th>q</th>
+            </table>
+            <table class="mobiles" style="display: none;" > <th>qs</th>
+            </table>
+            <table class="men" style="display: none;" > <th>qd</th>
+            </table>
+            <table class="women" style="display: none;" > <th>qf</th>
+            </table>
+            <table class="home" style="display: none;" > <th>qg</th>
+            </table>
+            <table class="babytoys" style="display: none;" > <th>qv</th>
+            </table>
+            <table class="supermarket" style="display: none;" > <th>q</th>
+            </table>
         </header>
         <section> </section>
         <footer> </footer>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
