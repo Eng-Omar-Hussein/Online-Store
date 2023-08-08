@@ -24,7 +24,7 @@ header .firstbar{
 }
 button{
     border: none;
-    background-color: var(--main-color);
+    background-color: transparent;
     text-transform: capitalize;
 }
 button:hover{
@@ -32,7 +32,7 @@ button:hover{
     cursor:pointer;
 }
 header .search{
-    background: var(--main-color);
+    background: transparent;
     display: grid;
     grid-template-columns: 30px 1fr 10px;
 }
@@ -51,27 +51,27 @@ header .logo{
     font-size: 20px;
     letter-spacing: 4px;
 }
-@media(max-width: 500px){
+@media(max-width: 510px){
     header .firstbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        grid-template-columns: 157px repeat(2, auto);
+        grid-template-rows: 41px 23px;
     }
     .cart,
     .user {
         display: flex;
         justify-content: end;
+        align-items: center;
     }
     header .search{
-        display: grid;
-        grid-template-columns: 30px 1fr 200px;
+        grid-row: 4;
+        grid-column: 1/4;
     }
 }
- header .secondbar{
+ header .secondbar {
     display: grid;
-    grid-template-columns: 200px repeat(8,1fr);
+    grid-template-columns: 200px repeat(7,max-content);
     align-content: center;
-    background-color: whitesmoke;
+    background-color: #fffaf0;
     height: 40px;
     text-align: center;
     font-weight: 600;
@@ -79,10 +79,12 @@ header .logo{
     font-size: small;
     white-space: nowrap;
     overflow-y: hidden;
+    border-bottom: 1px solid #e2e5f1;
  }
  .secondbar span:first-child{
-    border-right: solid rgb(182, 177, 177) 1px;
+    border-right: 1px solid #e2e5f1;
     color: #4949c5;
+
  }
  .secondbar span:first-child::after{
     content: "";
@@ -90,10 +92,42 @@ header .logo{
     border-style: solid;
     border-width: 5px;
     margin-left: 10px;
-    top: 11px;
+    top: 12px;
     position: relative;
-    /* border-radius: 50%; */
  }
  .secondbar span{
-    padding: 10px
+    padding: 13px
  }
+
+.secondbar span:not(:first-child):hover{
+    background-color: white;
+    cursor: default;
+    border-left: 1px solid #e2e5f1;
+    border-right: 1px solid #e2e5f1;
+    border-top-right-radius: 20px;
+}
+.secondbar span:first-child:hover{
+    cursor: default;
+}
+table.allcategories{
+    text-align: left;
+    text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 607px;
+}
+td:first-child{
+    background-color: #fffaf0;
+    padding: 8px 61px 8px 32px;
+    border-right: 1px solid #e2e5f1;
+} 
+
+th,
+td:not(:first-child) {
+    background-color: white;
+    padding: 8px 61px 8px 13px;
+}
+tbody,
+td{
+    font-size: small;
+}
